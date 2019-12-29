@@ -58,7 +58,7 @@ def callback():
 def handle_message(event):
 
     if event.message.text == "おみくじ":
-        omikuji = random.choice(["大吉", "大溝口", "中吉", "小吉", "吉", "凶", "大凶"])
+        omikuji = random.choice(["大吉田", "大溝口", "中田吉", "赤吉", "笠吉", "凶", "大匠"])
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=omikuji)
