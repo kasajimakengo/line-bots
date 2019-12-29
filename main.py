@@ -2,7 +2,6 @@ import sys
 import os
 from flask import Flask, request
 import random, json, requests
-from src import train_api
 from argparse import ArgumentParser
 
 # line用ライブラリ
@@ -64,12 +63,6 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=omikuji)
-        )
-    elif event.message.text == "山手線":
-        train_info = train_api.get_yamanote_line()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=train_info)
         )
     else:
         line_bot_api.reply_message(
