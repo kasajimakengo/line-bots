@@ -58,10 +58,15 @@ def callback():
 def handle_message(event):
 
     if event.message.text == "おみくじ":
-        omikuji = random.choice(["大吉", "中吉", "小吉", "吉", "凶", "大凶"])
+        omikuji = random.choice(["大吉", "大溝口", "中吉", "小吉", "吉", "凶", "大凶"])
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=omikuji)
+        )
+    elif event.message.text == "赤井":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="てんぷらをくいたい匠に対して今日は歯医者があるから工数に空きがないよと言った二人の会話 　が　かけれていて¥nナカダデンタルクリニックと水内庵　で　説かれている認識だった2個かけているとするなら　てんぷら　と　歯医者¥n歯医者の近くにある蕎麦屋さん　で　説いてる水内庵で天ぷらそば食べれば工数も天ぷら食べたいもクリアできるんじゃないかと思った次第¥n言葉遊びは　そば　しかしてない。なぞかけに対して問題解決を図ってしまった。")
         )
     else:
         line_bot_api.reply_message(
