@@ -2,7 +2,6 @@ import sys
 import os
 from flask import Flask, request
 import random, json, requests
-import pandas as pd
 from src import train_api
 from argparse import ArgumentParser
 
