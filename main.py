@@ -56,7 +56,7 @@ def callback():
 # 「おみくじ」と打つとランダムで運勢が返ってくる
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-
+    akaiWords="てんぷらをくいたい匠に対して今日は歯医者があるから工数に空きがないよと言った二人の会話 　が　かけれていて ナカダデンタルクリニックと水内庵　で　説かれている認識だった2個かけているとするなら　てんぷら　と　歯医者 歯医者の近くにある蕎麦屋さん　で　説いてる水内庵で天ぷらそば食べれば工数も天ぷら食べたいもクリアできるんじゃないかと思った次第 言葉遊びは　そば　しかしてない。なぞかけに対して問題解決を図ってしまった。"
     if event.message.text == "おみくじ":
         omikuji = random.choice(["大吉田", "大溝口", "中田吉", "赤吉", "笠吉", "凶", "大匠"])
         line_bot_api.reply_message(
@@ -66,7 +66,7 @@ def handle_message(event):
     elif event.message.text == "赤井":
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="てんぷらをくいたい匠に対して今日は歯医者があるから工数に空きがないよと言った二人の会話 　が　かけれていて ナカダデンタルクリニックと水内庵　で　説かれている認識だった2個かけているとするなら　てんぷら　と　歯医者 歯医者の近くにある蕎麦屋さん　で　説いてる水内庵で天ぷらそば食べれば工数も天ぷら食べたいもクリアできるんじゃないかと思った次第 言葉遊びは　そば　しかしてない。なぞかけに対して問題解決を図ってしまった。")
+            TextSendMessage(text=akaiWords)
         )
     else:
         line_bot_api.reply_message(
